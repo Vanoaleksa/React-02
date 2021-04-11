@@ -1,0 +1,19 @@
+.header{
+    grid-area: h;
+    background-color: rgba(224, 8, 8, 0.685);
+  
+  
+  }
+  
+  .header img{
+    width: 5px;
+  }
+
+  .inp{
+    grid-area:auto;
+   
+  }
+
+
+  
+
