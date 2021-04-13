@@ -1,5 +1,5 @@
 import s from './Profile.module.css';
-import Myposts from './Profile/Myposts/Myposts';
+import Myposts from './Myposts/Myposts';
 
 const Profile = (props) => {
   console.log(props)
