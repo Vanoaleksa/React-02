@@ -1,33 +1,44 @@
+import { NavLink } from 'react-router-dom';
 import s from './Dialogs.module.css'
 
-const Dialogs = (props) =>{
-    return(
+
+const Dialogitem = (props) => {
+    let path = '/dialogs/' + props.id;
+    return (
+
+        <div className={s.dialog + ' ' + s.active}>
+            <NavLink to={path}> {props.name}</NavLink>
+        </div>
+
+    );
+}
+
+const Message = (props) => {
+    return (
+        <div className={s.message}>{props.message}</div>
+    )
+}
+
+
+
+const Dialogs = (props) => {
+    return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-
-                <div className={s.dialog + ' ' + s.active}>
-                    Lionel
-                </div>
-                <div className={s.dialog}>
-                    Suares
-                </div>
-                <div className={s.dialog}>
-                    Neymar
-                </div>
-                <div className={s.dialog}>
-                    Ronaldinho
-                </div>
-                <div className={s.dialog}>
-                    Ter Stegen
-                </div>
-                <div className={s.dialog}>
-                    Grizman
-                </div>
+                <Dialogitem name='Lionel' id='1' />
+                <Dialogitem name='Suares' id='2' />
+                <Dialogitem name='Neymar' id='3' />
+                <Dialogitem name='Ronaldinho' id='4' />
+                <Dialogitem name='Ter Stegen' id='5' />
+                <Dialogitem name='Griezman' id='6' />
             </div>
             <div className={s.messages}>
-                <div className={s.message}>F*ck Real!</div>
-                <div className={s.message}>We are champions!</div>
-                <div className={s.message}>Do you smoke?</div>
+                <Message message='F*ck Real!' />
+                <Message message='We are champions!' />
+                <Message message='Do you smoke?' />
+                <Message message='Do you smoke?' />
+                <Message message='Do you smoke?' />
+                <Message message='Do you smoke?' />
             </div>
         </div>
     );
