@@ -4,9 +4,30 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+let posts = [
+  { id: '1', message: 'Visca el Barca!', likecounts: '100' },
+  { id: '2', message: 'Visca el Catalunya!', likecounts: '30' },
+]
+
+let dialogs = [
+  { id: '1', name: 'Lionel' },
+  { id: '2', name: 'Suares' },
+  { id: '3', name: 'Neymar' },
+  { id: '4', name: 'Ronaldinho' },
+  { id: '5', name: 'Ter Stegen' },
+  { id: '6', name: 'Griezman' }
+]
+
+let messages = [
+  { id: '1', message: 'F*ck Real!' },
+  { id: '2', message: 'We are champions!' },
+  { id: '3', message: 'Do you smoke?' }
+]
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
+    
+    <App posts={posts} dialogs={dialogs} messages={messages}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
